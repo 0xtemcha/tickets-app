@@ -41,7 +41,7 @@ export default function RootLayout({
             </Button>
           </div>
           <div>
-            <Button variant={"outline"} asChild>
+            <Button asChild>
               <Link href={ticketsPath()}>Tickets</Link>
             </Button>
           </div>
