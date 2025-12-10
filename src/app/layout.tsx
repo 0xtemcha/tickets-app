@@ -1,4 +1,5 @@
 import "./globals.css";
+import { LucideKanban } from "lucide-react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
@@ -32,8 +33,11 @@ export default function RootLayout({
       >
         <nav className="w-full flex py-2.5 px-5 justify-between border-b bg-background/95 backdrop-blur fixed left-0 right-0 top-0 z-20 supports-backdrop-blur:bg-background/60">
           <div>
-            <Button variant={"outline"} asChild>
-              <Link href={homePath()}>Home</Link>
+            <Button variant={"ghost"} asChild>
+              <Link href={homePath()}>
+                <LucideKanban />
+                <h1 className="text-lg font-semibold">TicketsApp</h1>
+              </Link>
             </Button>
           </div>
           <div>

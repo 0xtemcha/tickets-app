@@ -1,3 +1,9 @@
+import {
+  LucideCircleCheck,
+  LucideFile,
+  LucideFileText,
+  LucidePencilLine,
+} from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -11,9 +17,9 @@ import { initialTickets } from "@/data";
 import { ticketPath } from "@/paths";
 
 const TICKET_ICONS = {
-  OPEN: "🟢",
-  IN_PROGRESS: "🟡",
-  DONE: "🔴",
+  OPEN: <LucideFileText size={16} />,
+  IN_PROGRESS: <LucidePencilLine size={16} />,
+  DONE: <LucideCircleCheck size={16} />,
 };
 
 const TicketsPage = () => {
@@ -32,7 +38,7 @@ const TicketsPage = () => {
         {initialTickets.map((ticket) => (
           <Card key={ticket.id} className="w-full max-w-[420px]">
             <CardHeader>
-              <CardTitle className="flex gap-x-2">
+              <CardTitle className="flex gap-x-2 items-center">
                 <span>{TICKET_ICONS[ticket.status]}</span>
                 <h3 className="truncate">{ticket.title}</h3>
               </CardTitle>
